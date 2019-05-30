@@ -9,9 +9,8 @@ class Photos extends Component {
 
   componentDidMount (){
     this.getItems();
-    console.log(this.state.data)
-    const albumID = this.props.match.params.id;
-  }
+    this.getAlbumID();
+    }
 
   getItems (){
     fetch('https://jsonplaceholder.typicode.com/albums/%7Balbumid%7D/photos')
@@ -23,9 +22,14 @@ class Photos extends Component {
       })
   }
 
+  getAlbumID(){
+
+  }
 
 
   render (){
+    const albumID = this.props.match.params.id;
+    console.log(albumID);
     return (
         <h1>Hola</h1>
     )

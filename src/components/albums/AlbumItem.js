@@ -5,14 +5,11 @@ const AlbumItem = ({ userId, id, title  }) => {
 
   return (
     <tr>
-      <td>
-        {/* <Link
-          className="list-group-item-action fa fa-arrow-circle-right ml-4"
-          to={`/maintenance/${id}/`}
-        /> */}
-      </td>
+        <Link className="list-group-item-action"
+          to={`/albums/${id}/photos`}>
         <td>{userId}</td>
         <td>{title}</td>
+        </Link>
     </tr>
   );
 };
