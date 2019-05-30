@@ -23,8 +23,8 @@ export default function Header (){
                         <div className="nav-item dropdown">
                             <a href="/photos" className="nav-link dropdown-toggle" data-toggle="dropdown">Photos</a>
                             <div className="dropdown-menu">
-                                <a href="/photos" className="dropdown-item">A to Z</a>
-                                <a href="/photos" className="dropdown-item">Z to A</a>
+                                <a href="/albums/photos" className="dropdown-item">A to Z</a>
+                                <a href="/albums/photos" className="dropdown-item">Z to A</a>
                             </div>
                         </div>
                     </div>
