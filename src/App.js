@@ -6,7 +6,6 @@ import AlbumList from './components/albums/AlbumList';
 import './App.css';
 
 
-
 class App extends Component {
     render() {
       return (
@@ -16,6 +15,7 @@ class App extends Component {
         </div>
       );
     }
+
 }
 
 export default App;
