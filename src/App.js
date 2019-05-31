@@ -19,7 +19,7 @@ class App extends Component {
             <div className="container">
               <Switch>
                 <Route exact path="/albums" component={AlbumList}/>
-                <Route exact path="/albums/photos" component={Photos} />
+                <Route exact path="/albums/:id/photos" component={Photos} />
                 <Redirect to="/albums"/>
               </Switch>
             </div>

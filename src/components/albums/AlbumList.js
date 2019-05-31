@@ -27,9 +27,8 @@ class AlbumList extends Component {
         <table className="table table-striped">
             <thead>
               <tr>
-                <th></th>
-                <th>User</th>
-                <th>Title</th>
+                <th className="text-center">User</th>
+                <th className=" text-center">Title</th>
               </tr>
             </thead>
             <tbody>
