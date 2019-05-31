@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 
+import PhotoItem from './PhotoItem'
 
 class Photos extends Component {
 
@@ -10,7 +11,7 @@ class Photos extends Component {
 
   componentDidMount (){
     this.getItems();
-    setTimeout(()=> { this.getAlbumID();}, 3000);
+    setTimeout(()=> { this.getAlbumID();}, 500);
     }
 
 
@@ -29,13 +30,11 @@ class Photos extends Component {
         let albumsFilt =[]       
         this.state.data.map(albums => {
 
-                if(albums.albumId === albumID){
+                if(albums.albumId == albumID){
                     albumsFilt.push(albums)
                 }
-                return this.setState ({searchAlbums: albumsFilt})
-            })
-        
-        console.log("AlbumFILTRADOS ->", this.state.searchAlbums)
+            this.setState ({searchAlbums: albumsFilt})
+        })
 
     }       
         
@@ -45,31 +44,31 @@ class Photos extends Component {
 
     return (
      
-        <h1>Hola</h1>
+        // <h1>Hola</h1>
 
-    //    <div className="container mt-5">
-    //     <div className="jumbotron-info">
-    //         <table className="table table-striped">
-    //             <thead>
-    //             <tr>
-    //                 <th className="text-center">User</th>
-    //                 <th className=" text-center">Title</th>
-    //                 <th className=" text-center">Photo</th>
+       <div className="container mt-5">
+        <div className="jumbotron-info">
+            <table className="table table-striped">
+                <thead>
+                <tr>
+                    <th className="text-center">User</th>
+                    <th className=" text-center">Title</th>
+                    <th className=" text-center">Photo</th>
 
-    //             </tr>
-    //             </thead>
-    //             <tbody>
-    //                 {this.state.searchAlbums.map(album => 
-    //                 <PhotoItem 
-    //                 key={album.id}
-    //                 {...album}
-    //                 >
-    //                 </PhotoItem>)
-    //             }
-    //             </tbody>
-    //         </table>
-    //     </div>
-    //     </div>
+                </tr>
+                </thead>
+                <tbody>
+                    {this.state.searchAlbums.map(album => 
+                    <PhotoItem 
+                    key={album.id}
+                    {...album}
+                    >
+                    </PhotoItem>)
+                }
+                </tbody>
+            </table>
+        </div>
+        </div>
             
     )
    }
