@@ -44,34 +44,31 @@ class Photos extends Component {
 
     return (
      
-        // <h1>Hola</h1>
+        <div className="container mt-5">
+            <div className="jumbotron-info">
+                <table className="table table-striped table-rounded border border-grey">
+                    <thead className="thead-dark">
+                    <tr>
+                        <th className="text-center">Name</th>
+                        <th className=" text-center">Title</th>
+                        <th className=" text-center">Photo</th>
 
-       <div className="container mt-5">
-        <div className="jumbotron-info">
-            <table className="table table-striped">
-                <thead>
-                <tr>
-                    <th className="text-center">Name</th>
-                    <th className=" text-center">Title</th>
-                    <th className=" text-center">Photo</th>
-
-                </tr>
-                </thead>
-                <tbody>
-                    {this.state.searchAlbums.map(album => 
-                    <PhotoItem 
-                    key={album.id}
-                    {...album}
-                    >
-                    </PhotoItem>)
-                }
-                </tbody>
-            </table>
-        </div>
-        </div>
-            
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {this.state.searchAlbums.map(album => 
+                        <PhotoItem 
+                        key={album.id}
+                        {...album}
+                        >
+                        </PhotoItem>)
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>     
     )
-   }
+   }        
 }
 
 export default Photos;

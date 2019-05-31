@@ -21,28 +21,29 @@ class AlbumList extends Component {
   }
   
   render (){
+
     return (
       <div className="container mt-5">
-      <div className="jumbotron-info">
-        <table className="table table-striped">
-            <thead>
-              <tr>
-                <th className="text-center">Name</th>
-                <th className=" text-center">Album</th>
-              </tr>
-            </thead>
-            <tbody>
-              {this.state.data.map(album => 
-                <AlbumItem 
-                  key={album.id}
-                  {...album}
-                >
-                </AlbumItem>)
-              }
-            </tbody>
-        </table>
+        <div className="jumbotron-info">
+          <table className="table table-striped table-rounded border border-grey">
+              <thead className="thead-dark">
+                <tr>
+                  <th className="text-center">Name</th>
+                  <th className=" text-center">Album</th>
+                </tr>
+              </thead>
+              <tbody>
+                {this.state.data.map(album => 
+                  <AlbumItem 
+                    key={album.id}
+                    {...album}
+                  >
+                  </AlbumItem>)
+                }
+              </tbody>
+          </table>
+        </div>
       </div>
-    </div>
      )
   }
 };
