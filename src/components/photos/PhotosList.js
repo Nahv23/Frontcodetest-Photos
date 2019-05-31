@@ -51,7 +51,7 @@ class Photos extends Component {
             <table className="table table-striped">
                 <thead>
                 <tr>
-                    <th className="text-center">User</th>
+                    <th className="text-center">Name</th>
                     <th className=" text-center">Title</th>
                     <th className=" text-center">Photo</th>
 

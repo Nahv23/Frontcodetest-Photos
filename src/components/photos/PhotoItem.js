@@ -8,7 +8,8 @@ const PhotoItem = ({ albumId, title, thumbnailUrl  }) => {
     <tr>
       <td className="text-center list-group-item-action">{albumId}</td>
       <td className="text-center list-group-item-action">{title}</td>
-      <td className="text-center list-group-item-action">{thumbnailUrl}</td>
+      <td className="text-center list-group-item-action">
+        <img src={thumbnailUrl} alt={title}/></td>
     </tr>
   );
 };
