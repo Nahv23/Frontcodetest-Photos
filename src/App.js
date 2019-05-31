@@ -3,7 +3,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 
 import NavBar from './components/misc/NavBar';
 import AlbumList from './components/albums/AlbumList';
-import Photos from './components/photos/Photos';
+import Photos from './components/photos/PhotosList';
 
 import './App.css';
 
